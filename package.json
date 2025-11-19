@@ -4,12 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-  "deploy": "gh-pages -d dist",
-  "predeploy": "npm run build",
-  "build": "vite build"
-}
-,
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build",
+    "build": "vite build",
+    "update": "git add . && git commit -m 'Update' && git push origin main && npm run deploy"
+  },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "vite": "^7.2.2"
   }
 }
