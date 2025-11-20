@@ -1,0 +1,108 @@
+/* common.css dosyanızdan alındı */
+
+/* 4. Trailer Hata Modalı */
+.trailer-error-window {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 600px;
+  height: 350px;
+  padding: 0;
+  overflow: hidden;
+}
+.trailer-error-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.trailer-error-text {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.trailer-error-text h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.trailer-error-text p {
+  font-size: 16px;
+  color: #ccc;
+}
+.trailer-error-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trailer-error-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 5. Trailer Video Modalı (YouTube) */
+.trailer-modal-content {
+  background: #000;
+  padding: 0;
+  width: 800px;
+  max-width: 95%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trailer-modal-body {
+  width: 100%;
+  line-height: 0; 
+}
+.trailer-modal-body iframe {
+  width: 100%;
+  height: 450px;
+  border-radius: 16px;
+}
+
+/* Light Mode */
+body.light-mode .trailer-error-window {
+  background-color: #ffffff !important;
+  border-color: #ddd !important;
+  color: #000 !important;
+}
+body.light-mode .trailer-error-text h2,
+body.light-mode .trailer-error-text p {
+  color: #000000 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .trailer-error-window {
+    height: auto;
+    flex-direction: column;
+  }
+  .trailer-error-content {
+    flex-direction: column-reverse;
+  }
+  .trailer-error-image {
+    height: 200px;
+  }
+  .trailer-modal-body iframe {
+    height: 250px;
+  }
+}
+@media (max-width: 480px) {
+   /* Trailer modal (mobil) */
+  .trailer-modal-content {
+    width: 96% !important;
+    height: 260px !important;
+    padding: 0 !important;
+  }
+  .trailer-modal-body {
+    height: 100%;
+  }
+  #trailer-iframe {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
